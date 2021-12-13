@@ -17,4 +17,32 @@
     <style name="Progressor">
         <item name="colorSecondary">@color/red</item>
     </style>
+
+    <style name="BottomSheetStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Modal</item>
+    </style>
+
+    <style name="Modal" parent="Widget.Design.BottomSheet.Modal">
+        <item name="background">@drawable/delete_sheet</item>
+    </style>
+
+
+
+    <style name="NightMode" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimaryDarkMode</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="backgroundColor">#303030</item>
+        <item name="cardBackgroundColor">#424242</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="buttonTint">#ffffffff</item>
+    </style>
+
+
+    <style name="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:typeface">monospace</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 </resources>

@@ -7,10 +7,68 @@
     android:background="#e8e8e8"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/filter"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/filter"
+            android:padding="5dp"
+            android:background="@drawable/bg_filter"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/nofilter"
+            android:background="@drawable/filter_un_shape"
+            android:layout_margin="5sp"
+            android:paddingStart="10sp"
+            android:paddingEnd="10sp"
+            android:paddingTop="7sp"
+            android:paddingBottom="7sp"
+            android:text="No Filter"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/hightolow"
+            android:layout_margin="5sp"
+            android:paddingStart="10sp"
+            android:paddingEnd="10sp"
+            android:paddingTop="7sp"
+            android:paddingBottom="7sp"
+            android:background="@drawable/filter_un_shape"
+            android:text="High to Low"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/lowtohigh"
+            android:layout_margin="5sp"
+            android:paddingStart="10sp"
+            android:paddingEnd="10sp"
+            android:paddingTop="7sp"
+            android:paddingBottom="7sp"
+            android:background="@drawable/filter_un_shape"
+            android:text="Low to High"/>
+
+
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notesRecycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/notesRecycler"/>
+        android:layout_below="@+id/filter" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
@@ -18,7 +76,7 @@
         android:id="@+id/addNewNoteBtn"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_margin="25sp"
+        android:layout_margin="20sp"
         android:src="@drawable/add"
         android:backgroundTint="@color/red"
         android:contentDescription="@string/add" />

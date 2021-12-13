@@ -15,6 +15,8 @@ public class NotesViewModal extends AndroidViewModel {
 
     public NotesRepository repository;
     public LiveData<List<Notes>> getallNotes;
+    public LiveData<List<Notes>> hightolow;
+    public LiveData<List<Notes>> lowtohigh;
 
 
 
@@ -23,18 +25,20 @@ public class NotesViewModal extends AndroidViewModel {
 
         repository = new NotesRepository(application);
         getallNotes = repository.getallNotes;
+        hightolow = repository.HighToLow;
+        lowtohigh = repository.lowToHigh;
 
     }
 
-    void insertNote(Notes notes){
+   public void insertNote(Notes notes){
         repository.insertNotes(notes);
     }
 
-    void deleteNote(int id){
+   public void deleteNote(int id){
         repository.DeleteNotes(id);
     }
 
-    void updateNote(Notes notes){
+   public void updateNote(Notes notes){
         repository.updateNotes(notes);
     }
 }

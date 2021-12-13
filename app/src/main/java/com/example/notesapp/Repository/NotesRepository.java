@@ -15,11 +15,16 @@ public class NotesRepository {
     public NotesDao notesDao;
 
     public LiveData<List<Notes>> getallNotes;
+    public LiveData<List<Notes>> lowToHigh;
+    public LiveData<List<Notes>> HighToLow;
+
 
     public NotesRepository(Application application){
         NotesDatabase database = NotesDatabase.getDatabaseInstance(application);
         notesDao = database.notesDao();
         getallNotes = notesDao.getallNotes();
+        HighToLow = notesDao.highToLow();
+        lowToHigh = notesDao.lowToHigh();
     }
 
     public void insertNotes(Notes notes){
